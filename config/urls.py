@@ -3,6 +3,7 @@ from django.urls import path, include
 from drf_spectacular.views import SpectacularRedocView, SpectacularSwaggerView, SpectacularJSONAPIView
 
 urlpatterns = [
+    path('api/', include('weather.urls')),
     path('admin/', admin.site.urls),
     path('schema/', SpectacularJSONAPIView.as_view(), name='schema'),
     # Optional UI:
